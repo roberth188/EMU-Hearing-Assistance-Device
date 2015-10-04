@@ -1,0 +1,15 @@
+# Output products list for <FFT_IFFT_IP_CORE>
+FFT_IFFT_IP_CORE.asy
+FFT_IFFT_IP_CORE.gise
+FFT_IFFT_IP_CORE.ngc
+FFT_IFFT_IP_CORE.sym
+FFT_IFFT_IP_CORE.v
+FFT_IFFT_IP_CORE.veo
+FFT_IFFT_IP_CORE.xco
+FFT_IFFT_IP_CORE.xise
+FFT_IFFT_IP_CORE\doc\xfft_ds260.pdf
+FFT_IFFT_IP_CORE\doc\xfft_v7_1_readme.txt
+FFT_IFFT_IP_CORE\doc\xfft_v7_1_vinfo.html
+FFT_IFFT_IP_CORE_flist.txt
+FFT_IFFT_IP_CORE_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

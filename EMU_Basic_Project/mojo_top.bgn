@@ -1,0 +1,929 @@
+Release 14.7 - Bitgen P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Loading device for application Rf_Device from file '6slx16.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\.
+   "mojo_top" is an NCD, version 3.2, device xc6slx16, package csg225, speed -2
+Opened constraints file mojo_top.pcf.
+
+Wed Aug 05 00:07:23 2015
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\bitgen.exe -intstyle ise -w -g Binary:yes -g Compress -g CRC:Enable -g Reset_on_err:No -g ConfigRate:2 -g ProgPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:No -g SPI_buswidth:1 -g TIMER_CFG:0xFFFF -g multipin_wakeup:No -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No -g en_sw_gsr:No -g drive_awake:No -g sw_clk:Startupclk -g sw_gwe_cycle:5 -g sw_gts_cycle:4 mojo_top.ncd 
+
+INFO:Bitgen:341 - This design is using one or more 9K Block RAMs (RAMB8BWER). 
+   9K Block RAM initialization data, both user defined and default, requires a
+   special bit stream format.  For more information, please reference Xilinx
+   Answer Record 39999.
+Summary of Bitgen Options:
++----------------------+----------------------+
+| Option Name          | Current Setting      |
++----------------------+----------------------+
+| Compress             | (Enabled)            |
++----------------------+----------------------+
+| Readback             | (Not Specified)*     |
++----------------------+----------------------+
+| CRC                  | Enable**             |
++----------------------+----------------------+
+| DebugBitstream       | No*                  |
++----------------------+----------------------+
+| ConfigRate           | 2**                  |
++----------------------+----------------------+
+| StartupClk           | Cclk**               |
++----------------------+----------------------+
+| DonePin              | Pullup*              |
++----------------------+----------------------+
+| ProgPin              | Pullup**             |
++----------------------+----------------------+
+| TckPin               | Pullup**             |
++----------------------+----------------------+
+| TdiPin               | Pullup**             |
++----------------------+----------------------+
+| TdoPin               | Pullup**             |
++----------------------+----------------------+
+| TmsPin               | Pullup**             |
++----------------------+----------------------+
+| UnusedPin            | Pulldown**           |
++----------------------+----------------------+
+| GWE_cycle            | 6**                  |
++----------------------+----------------------+
+| GTS_cycle            | 5**                  |
++----------------------+----------------------+
+| LCK_cycle            | NoWait**             |
++----------------------+----------------------+
+| DONE_cycle           | 4**                  |
++----------------------+----------------------+
+| Persist              | No*                  |
++----------------------+----------------------+
+| DriveDone            | No**                 |
++----------------------+----------------------+
+| DonePipe             | Yes                  |
++----------------------+----------------------+
+| Security             | None**               |
++----------------------+----------------------+
+| UserID               | 0xFFFFFFFF**         |
++----------------------+----------------------+
+| ActiveReconfig       | No*                  |
++----------------------+----------------------+
+| Partial              | (Not Specified)*     |
++----------------------+----------------------+
+| Encrypt              | No*                  |
++----------------------+----------------------+
+| Key0                 | pick*                |
++----------------------+----------------------+
+| StartCBC             | pick*                |
++----------------------+----------------------+
+| KeyFile              | (Not Specified)*     |
++----------------------+----------------------+
+| drive_awake          | No**                 |
++----------------------+----------------------+
+| Reset_on_err         | No**                 |
++----------------------+----------------------+
+| suspend_filter       | Yes*                 |
++----------------------+----------------------+
+| en_sw_gsr            | No**                 |
++----------------------+----------------------+
+| en_suspend           | No*                  |
++----------------------+----------------------+
+| sw_clk               | Startupclk**         |
++----------------------+----------------------+
+| sw_gwe_cycle         | 5**                  |
++----------------------+----------------------+
+| sw_gts_cycle         | 4**                  |
++----------------------+----------------------+
+| multipin_wakeup      | No**                 |
++----------------------+----------------------+
+| wakeup_mask          | 0x00*                |
++----------------------+----------------------+
+| ExtMasterCclk_en     | No**                 |
++----------------------+----------------------+
+| ExtMasterCclk_divide | 1*                   |
++----------------------+----------------------+
+| CrcCoverage          | No*                  |
++----------------------+----------------------+
+| glutmask             | Yes*                 |
++----------------------+----------------------+
+| next_config_addr     | 0x00000000*          |
++----------------------+----------------------+
+| next_config_new_mode | No*                  |
++----------------------+----------------------+
+| next_config_boot_mode | 001*                 |
++----------------------+----------------------+
+| next_config_register_write | Enable*              |
++----------------------+----------------------+
+| next_config_reboot   | Enable*              |
++----------------------+----------------------+
+| golden_config_addr   | 0x00000000*          |
++----------------------+----------------------+
+| failsafe_user        | 0x0000*              |
++----------------------+----------------------+
+| TIMER_CFG            | 0xFFFF               |
++----------------------+----------------------+
+| spi_buswidth         | 1**                  |
++----------------------+----------------------+
+| TimeStamp            | Default*             |
++----------------------+----------------------+
+| IEEE1532             | No*                  |
++----------------------+----------------------+
+| Binary               | Yes                  |
++----------------------+----------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+There were 0 CONFIG constraint(s) processed from mojo_top.pcf.
+
+
+Running DRC.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_30_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_36_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_24_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_42_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored9_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored12_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored443_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored448_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored441_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored416_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored410_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored49_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored411_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored412_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored414_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored459_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored462_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored457_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored213_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored29_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored430_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored429_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored425_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored427_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored246_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored245_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored222_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored219_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored218_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored223_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored221_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored220_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored147_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored163_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored160_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored123_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored120_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored121_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored127_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored119_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored442_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored445_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored450_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored455_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored413_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored415_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored421_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored463_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored461_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored215_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored212_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored216_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored431_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored432_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored211_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored142_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored115_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored116_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored164_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored14_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored10_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored13_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored58_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored58_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored58_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored44_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored45_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored42_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored446_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored444_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored447_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored453_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored460_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored454_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored420_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored458_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored464_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored264_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored426_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored428_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored242_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored19_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored114_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored159_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored117_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored118_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored11_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored15_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored16_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored63_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored63_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored63_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored57_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored57_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored57_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored43_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored47_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored48_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored41_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored62_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored62_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored62_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored60_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored60_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored60_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored452_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored456_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored451_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored449_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored424_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored419_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored422_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored423_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored214_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored256_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored254_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored247_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored248_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored241_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored217_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored224_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored141_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored143_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored145_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored148_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored230_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored113_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored111_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored110_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored162_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored157_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored161_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored151_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored124_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored149_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored126_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored31_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored31_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored31_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored28_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored28_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored28_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored32_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored32_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored32_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored26_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored26_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored26_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored59_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored59_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored59_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored46_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored38_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored39_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored37_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored35_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored263_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored259_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored257_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored252_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored251_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored255_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored243_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored244_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored250_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored249_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored146_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored144_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored232_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored228_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored231_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored112_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored158_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored154_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored156_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored122_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored130_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored132_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored125_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored27_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored27_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored27_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored30_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored30_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored30_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored61_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored61_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored61_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored7_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored33_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored40_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored36_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored34_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored418_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored210_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored262_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored260_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored258_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored261_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored253_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored225_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored226_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored229_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored150_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored153_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored155_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored131_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored25_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored25_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored25_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored29_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored29_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored29_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored64_RAMA_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored64_RAMB_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored64_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored5_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored49_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored49_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored55_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored55_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored417_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored227_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored152_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored128_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_FFTStored129_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored23_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored23_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored21_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored21_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored8_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored1_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored54_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored54_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored51_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored51_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored56_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored56_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored17_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored17_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored19_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored19_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored18_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored18_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored24_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored24_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored22_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored22_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored20_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored20_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored2_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored6_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored4_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored3_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored53_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored53_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored52_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored52_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored50_RAMC_DPO> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <FFT_Module_Instance/Mram_AnalyzerStored50_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+DRC detected 0 errors and 261 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
+Creating bit map...
+Saving bit stream in "mojo_top.bit".
+Bitstream compression saved 248336 bits.
+Saving bit stream in "mojo_top.bin".
+Bitstream generation is complete.

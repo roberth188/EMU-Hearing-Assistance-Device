@@ -1,0 +1,15 @@
+# Output products list for <Translation_Module_DM>
+Translation_Module_DM.asy
+Translation_Module_DM.gise
+Translation_Module_DM.ngc
+Translation_Module_DM.sym
+Translation_Module_DM.v
+Translation_Module_DM.veo
+Translation_Module_DM.xco
+Translation_Module_DM.xise
+Translation_Module_DM\doc\cordic_ds249.pdf
+Translation_Module_DM\doc\cordic_v4_0_vinfo.html
+Translation_Module_DM_flist.txt
+Translation_Module_DM_readme.txt
+Translation_Module_DM_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

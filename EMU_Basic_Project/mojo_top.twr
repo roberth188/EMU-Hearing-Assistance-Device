@@ -1,0 +1,702 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o mojo_top.twr mojo_top.pcf -ucf
+emu_board.ucf
+
+Design file:              mojo_top.ncd
+Physical constraint file: mojo_top.pcf
+Device,package,speed:     xc6slx16,csg225,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 24512917 paths analyzed, 19026 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  19.028ns.
+--------------------------------------------------------------------------------
+
+Paths for end point FFT_Module_Instance/Mram_AnalyzerStored27_RAMC (SLICE_X22Y0.CX), 126977 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.972ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FFT_Module_Instance/FFTCount_13 (FF)
+  Destination:          FFT_Module_Instance/Mram_AnalyzerStored27_RAMC (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      18.986ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.007ns (0.431 - 0.438)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FFT_Module_Instance/FFTCount_13 to FFT_Module_Instance/Mram_AnalyzerStored27_RAMC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y20.BQ      Tcko                  0.525   FFT_Module_Instance/FFTCount<15>
+                                                       FFT_Module_Instance/FFTCount_13
+    SLICE_X20Y17.A2      net (fanout=13)       1.013   FFT_Module_Instance/FFTCount<13>
+    SLICE_X20Y17.A       Tilo                  0.235   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11_1
+    SLICE_X21Y16.A4      net (fanout=2)        0.488   FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11
+    SLICE_X21Y16.A       Tilo                  0.259   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11_1
+    DSP48_X1Y6.A8        net (fanout=8)        1.677   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+    DSP48_X1Y6.M10       Tdspdo_A_M            3.265   FFT_Module_Instance/Mmult_bValIndMult1
+                                                       FFT_Module_Instance/Mmult_bValIndMult1
+    SLICE_X33Y21.D1      net (fanout=4)        1.960   FFT_Module_Instance/bValIndMult1<10>
+    SLICE_X33Y21.D       Tilo                  0.259   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o3
+    SLICE_X33Y20.B5      net (fanout=1)        0.624   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+    SLICE_X33Y20.B       Tilo                  0.259   N261
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o21
+    SLICE_X31Y18.B2      net (fanout=10)       1.009   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o
+    SLICE_X31Y18.B       Tilo                  0.259   FFT_Module_Instance/aValM1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6_SW6
+    SLICE_X32Y18.D2      net (fanout=1)        0.751   N280
+    SLICE_X32Y18.BMUX    Topdb                 0.430   FFT_Module_Instance/AnalyzerConditionRe1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_4_f7
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_2_f8
+    SLICE_X11Y19.D1      net (fanout=24)       2.614   FFT_Module_Instance/AnalyzerConditionRe1
+    SLICE_X11Y19.D       Tilo                  0.259   FFT_Module_Instance/AnalyzerOutputIm<11>
+                                                       FFT_Module_Instance/Mmux_AnalyzerOutputIm31
+    SLICE_X22Y0.CX       net (fanout=8)        2.809   FFT_Module_Instance/AnalyzerOutputIm<11>
+    SLICE_X22Y0.CLK      Tds                   0.291   FFT_Module_Instance/Mram_AnalyzerStored27_RAMD_O
+                                                       FFT_Module_Instance/Mram_AnalyzerStored27_RAMC
+    -------------------------------------------------  ---------------------------
+    Total                                     18.986ns (6.041ns logic, 12.945ns route)
+                                                       (31.8% logic, 68.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.079ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1 (FF)
+  Destination:          FFT_Module_Instance/Mram_AnalyzerStored27_RAMC (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      18.869ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.017ns (0.431 - 0.448)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1 to FFT_Module_Instance/Mram_AnalyzerStored27_RAMC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y17.AQ      Tcko                  0.476   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1
+    SLICE_X20Y17.A3      net (fanout=1)        0.945   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1
+    SLICE_X20Y17.A       Tilo                  0.235   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11_1
+    SLICE_X21Y16.A4      net (fanout=2)        0.488   FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11
+    SLICE_X21Y16.A       Tilo                  0.259   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11_1
+    DSP48_X1Y6.A8        net (fanout=8)        1.677   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+    DSP48_X1Y6.M10       Tdspdo_A_M            3.265   FFT_Module_Instance/Mmult_bValIndMult1
+                                                       FFT_Module_Instance/Mmult_bValIndMult1
+    SLICE_X33Y21.D1      net (fanout=4)        1.960   FFT_Module_Instance/bValIndMult1<10>
+    SLICE_X33Y21.D       Tilo                  0.259   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o3
+    SLICE_X33Y20.B5      net (fanout=1)        0.624   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+    SLICE_X33Y20.B       Tilo                  0.259   N261
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o21
+    SLICE_X31Y18.B2      net (fanout=10)       1.009   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o
+    SLICE_X31Y18.B       Tilo                  0.259   FFT_Module_Instance/aValM1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6_SW6
+    SLICE_X32Y18.D2      net (fanout=1)        0.751   N280
+    SLICE_X32Y18.BMUX    Topdb                 0.430   FFT_Module_Instance/AnalyzerConditionRe1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_4_f7
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_2_f8
+    SLICE_X11Y19.D1      net (fanout=24)       2.614   FFT_Module_Instance/AnalyzerConditionRe1
+    SLICE_X11Y19.D       Tilo                  0.259   FFT_Module_Instance/AnalyzerOutputIm<11>
+                                                       FFT_Module_Instance/Mmux_AnalyzerOutputIm31
+    SLICE_X22Y0.CX       net (fanout=8)        2.809   FFT_Module_Instance/AnalyzerOutputIm<11>
+    SLICE_X22Y0.CLK      Tds                   0.291   FFT_Module_Instance/Mram_AnalyzerStored27_RAMD_O
+                                                       FFT_Module_Instance/Mram_AnalyzerStored27_RAMC
+    -------------------------------------------------  ---------------------------
+    Total                                     18.869ns (5.992ns logic, 12.877ns route)
+                                                       (31.8% logic, 68.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.098ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FFT_Module_Instance/FFTCount_13 (FF)
+  Destination:          FFT_Module_Instance/Mram_AnalyzerStored27_RAMC (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      18.860ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.007ns (0.431 - 0.438)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FFT_Module_Instance/FFTCount_13 to FFT_Module_Instance/Mram_AnalyzerStored27_RAMC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y20.BQ      Tcko                  0.525   FFT_Module_Instance/FFTCount<15>
+                                                       FFT_Module_Instance/FFTCount_13
+    SLICE_X20Y17.A2      net (fanout=13)       1.013   FFT_Module_Instance/FFTCount<13>
+    SLICE_X20Y17.A       Tilo                  0.235   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11_1
+    SLICE_X21Y16.A4      net (fanout=2)        0.488   FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11
+    SLICE_X21Y16.A       Tilo                  0.259   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11_1
+    DSP48_X1Y6.A8        net (fanout=8)        1.677   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+    DSP48_X1Y6.M15       Tdspdo_A_M            3.265   FFT_Module_Instance/Mmult_bValIndMult1
+                                                       FFT_Module_Instance/Mmult_bValIndMult1
+    SLICE_X33Y23.B1      net (fanout=6)        1.469   FFT_Module_Instance/bValIndMult1<15>
+    SLICE_X33Y23.B       Tilo                  0.259   N106
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_183_o1_SW2
+    SLICE_X33Y23.A2      net (fanout=2)        1.004   N106
+    SLICE_X33Y23.A       Tilo                  0.259   N106
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_183_o21
+    SLICE_X30Y20.D4      net (fanout=9)        0.796   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_183_o
+    SLICE_X30Y20.D       Tilo                  0.254   FFT_Module_Instance/aVal1_6
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_5_SW6
+    SLICE_X32Y18.B2      net (fanout=1)        0.961   N260
+    SLICE_X32Y18.BMUX    Topbb                 0.423   FFT_Module_Instance/AnalyzerConditionRe1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_5
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_3_f7
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_2_f8
+    SLICE_X11Y19.D1      net (fanout=24)       2.614   FFT_Module_Instance/AnalyzerConditionRe1
+    SLICE_X11Y19.D       Tilo                  0.259   FFT_Module_Instance/AnalyzerOutputIm<11>
+                                                       FFT_Module_Instance/Mmux_AnalyzerOutputIm31
+    SLICE_X22Y0.CX       net (fanout=8)        2.809   FFT_Module_Instance/AnalyzerOutputIm<11>
+    SLICE_X22Y0.CLK      Tds                   0.291   FFT_Module_Instance/Mram_AnalyzerStored27_RAMD_O
+                                                       FFT_Module_Instance/Mram_AnalyzerStored27_RAMC
+    -------------------------------------------------  ---------------------------
+    Total                                     18.860ns (6.029ns logic, 12.831ns route)
+                                                       (32.0% logic, 68.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point FFT_Module_Instance/Mram_AnalyzerStored25_RAMC (SLICE_X26Y2.CX), 126977 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.985ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FFT_Module_Instance/FFTCount_13 (FF)
+  Destination:          FFT_Module_Instance/Mram_AnalyzerStored25_RAMC (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      18.980ns (Levels of Logic = 8)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FFT_Module_Instance/FFTCount_13 to FFT_Module_Instance/Mram_AnalyzerStored25_RAMC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y20.BQ      Tcko                  0.525   FFT_Module_Instance/FFTCount<15>
+                                                       FFT_Module_Instance/FFTCount_13
+    SLICE_X20Y17.A2      net (fanout=13)       1.013   FFT_Module_Instance/FFTCount<13>
+    SLICE_X20Y17.A       Tilo                  0.235   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11_1
+    SLICE_X21Y16.A4      net (fanout=2)        0.488   FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11
+    SLICE_X21Y16.A       Tilo                  0.259   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11_1
+    DSP48_X1Y6.A8        net (fanout=8)        1.677   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+    DSP48_X1Y6.M10       Tdspdo_A_M            3.265   FFT_Module_Instance/Mmult_bValIndMult1
+                                                       FFT_Module_Instance/Mmult_bValIndMult1
+    SLICE_X33Y21.D1      net (fanout=4)        1.960   FFT_Module_Instance/bValIndMult1<10>
+    SLICE_X33Y21.D       Tilo                  0.259   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o3
+    SLICE_X33Y20.B5      net (fanout=1)        0.624   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+    SLICE_X33Y20.B       Tilo                  0.259   N261
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o21
+    SLICE_X31Y18.B2      net (fanout=10)       1.009   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o
+    SLICE_X31Y18.B       Tilo                  0.259   FFT_Module_Instance/aValM1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6_SW6
+    SLICE_X32Y18.D2      net (fanout=1)        0.751   N280
+    SLICE_X32Y18.BMUX    Topdb                 0.430   FFT_Module_Instance/AnalyzerConditionRe1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_4_f7
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_2_f8
+    SLICE_X11Y19.D1      net (fanout=24)       2.614   FFT_Module_Instance/AnalyzerConditionRe1
+    SLICE_X11Y19.D       Tilo                  0.259   FFT_Module_Instance/AnalyzerOutputIm<11>
+                                                       FFT_Module_Instance/Mmux_AnalyzerOutputIm31
+    SLICE_X26Y2.CX       net (fanout=8)        2.803   FFT_Module_Instance/AnalyzerOutputIm<11>
+    SLICE_X26Y2.CLK      Tds                   0.291   FFT_Module_Instance/Mram_AnalyzerStored25_RAMD_O
+                                                       FFT_Module_Instance/Mram_AnalyzerStored25_RAMC
+    -------------------------------------------------  ---------------------------
+    Total                                     18.980ns (6.041ns logic, 12.939ns route)
+                                                       (31.8% logic, 68.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.092ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1 (FF)
+  Destination:          FFT_Module_Instance/Mram_AnalyzerStored25_RAMC (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      18.863ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.010ns (0.438 - 0.448)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1 to FFT_Module_Instance/Mram_AnalyzerStored25_RAMC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y17.AQ      Tcko                  0.476   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1
+    SLICE_X20Y17.A3      net (fanout=1)        0.945   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1
+    SLICE_X20Y17.A       Tilo                  0.235   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11_1
+    SLICE_X21Y16.A4      net (fanout=2)        0.488   FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11
+    SLICE_X21Y16.A       Tilo                  0.259   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11_1
+    DSP48_X1Y6.A8        net (fanout=8)        1.677   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+    DSP48_X1Y6.M10       Tdspdo_A_M            3.265   FFT_Module_Instance/Mmult_bValIndMult1
+                                                       FFT_Module_Instance/Mmult_bValIndMult1
+    SLICE_X33Y21.D1      net (fanout=4)        1.960   FFT_Module_Instance/bValIndMult1<10>
+    SLICE_X33Y21.D       Tilo                  0.259   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o3
+    SLICE_X33Y20.B5      net (fanout=1)        0.624   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+    SLICE_X33Y20.B       Tilo                  0.259   N261
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o21
+    SLICE_X31Y18.B2      net (fanout=10)       1.009   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o
+    SLICE_X31Y18.B       Tilo                  0.259   FFT_Module_Instance/aValM1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6_SW6
+    SLICE_X32Y18.D2      net (fanout=1)        0.751   N280
+    SLICE_X32Y18.BMUX    Topdb                 0.430   FFT_Module_Instance/AnalyzerConditionRe1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_4_f7
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_2_f8
+    SLICE_X11Y19.D1      net (fanout=24)       2.614   FFT_Module_Instance/AnalyzerConditionRe1
+    SLICE_X11Y19.D       Tilo                  0.259   FFT_Module_Instance/AnalyzerOutputIm<11>
+                                                       FFT_Module_Instance/Mmux_AnalyzerOutputIm31
+    SLICE_X26Y2.CX       net (fanout=8)        2.803   FFT_Module_Instance/AnalyzerOutputIm<11>
+    SLICE_X26Y2.CLK      Tds                   0.291   FFT_Module_Instance/Mram_AnalyzerStored25_RAMD_O
+                                                       FFT_Module_Instance/Mram_AnalyzerStored25_RAMC
+    -------------------------------------------------  ---------------------------
+    Total                                     18.863ns (5.992ns logic, 12.871ns route)
+                                                       (31.8% logic, 68.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.111ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FFT_Module_Instance/FFTCount_13 (FF)
+  Destination:          FFT_Module_Instance/Mram_AnalyzerStored25_RAMC (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      18.854ns (Levels of Logic = 8)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FFT_Module_Instance/FFTCount_13 to FFT_Module_Instance/Mram_AnalyzerStored25_RAMC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y20.BQ      Tcko                  0.525   FFT_Module_Instance/FFTCount<15>
+                                                       FFT_Module_Instance/FFTCount_13
+    SLICE_X20Y17.A2      net (fanout=13)       1.013   FFT_Module_Instance/FFTCount<13>
+    SLICE_X20Y17.A       Tilo                  0.235   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11_1
+    SLICE_X21Y16.A4      net (fanout=2)        0.488   FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11
+    SLICE_X21Y16.A       Tilo                  0.259   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11_1
+    DSP48_X1Y6.A8        net (fanout=8)        1.677   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+    DSP48_X1Y6.M15       Tdspdo_A_M            3.265   FFT_Module_Instance/Mmult_bValIndMult1
+                                                       FFT_Module_Instance/Mmult_bValIndMult1
+    SLICE_X33Y23.B1      net (fanout=6)        1.469   FFT_Module_Instance/bValIndMult1<15>
+    SLICE_X33Y23.B       Tilo                  0.259   N106
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_183_o1_SW2
+    SLICE_X33Y23.A2      net (fanout=2)        1.004   N106
+    SLICE_X33Y23.A       Tilo                  0.259   N106
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_183_o21
+    SLICE_X30Y20.D4      net (fanout=9)        0.796   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_183_o
+    SLICE_X30Y20.D       Tilo                  0.254   FFT_Module_Instance/aVal1_6
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_5_SW6
+    SLICE_X32Y18.B2      net (fanout=1)        0.961   N260
+    SLICE_X32Y18.BMUX    Topbb                 0.423   FFT_Module_Instance/AnalyzerConditionRe1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_5
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_3_f7
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_2_f8
+    SLICE_X11Y19.D1      net (fanout=24)       2.614   FFT_Module_Instance/AnalyzerConditionRe1
+    SLICE_X11Y19.D       Tilo                  0.259   FFT_Module_Instance/AnalyzerOutputIm<11>
+                                                       FFT_Module_Instance/Mmux_AnalyzerOutputIm31
+    SLICE_X26Y2.CX       net (fanout=8)        2.803   FFT_Module_Instance/AnalyzerOutputIm<11>
+    SLICE_X26Y2.CLK      Tds                   0.291   FFT_Module_Instance/Mram_AnalyzerStored25_RAMD_O
+                                                       FFT_Module_Instance/Mram_AnalyzerStored25_RAMC
+    -------------------------------------------------  ---------------------------
+    Total                                     18.854ns (6.029ns logic, 12.825ns route)
+                                                       (32.0% logic, 68.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point FFT_Module_Instance/Mram_AnalyzerStored17_RAMC (SLICE_X34Y2.CX), 126977 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.060ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FFT_Module_Instance/FFTCount_13 (FF)
+  Destination:          FFT_Module_Instance/Mram_AnalyzerStored17_RAMC (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      18.935ns (Levels of Logic = 8)
+  Clock Path Skew:      0.030ns (0.468 - 0.438)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FFT_Module_Instance/FFTCount_13 to FFT_Module_Instance/Mram_AnalyzerStored17_RAMC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y20.BQ      Tcko                  0.525   FFT_Module_Instance/FFTCount<15>
+                                                       FFT_Module_Instance/FFTCount_13
+    SLICE_X20Y17.A2      net (fanout=13)       1.013   FFT_Module_Instance/FFTCount<13>
+    SLICE_X20Y17.A       Tilo                  0.235   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11_1
+    SLICE_X21Y16.A4      net (fanout=2)        0.488   FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11
+    SLICE_X21Y16.A       Tilo                  0.259   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11_1
+    DSP48_X1Y6.A8        net (fanout=8)        1.677   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+    DSP48_X1Y6.M10       Tdspdo_A_M            3.265   FFT_Module_Instance/Mmult_bValIndMult1
+                                                       FFT_Module_Instance/Mmult_bValIndMult1
+    SLICE_X33Y21.D1      net (fanout=4)        1.960   FFT_Module_Instance/bValIndMult1<10>
+    SLICE_X33Y21.D       Tilo                  0.259   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o3
+    SLICE_X33Y20.B5      net (fanout=1)        0.624   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+    SLICE_X33Y20.B       Tilo                  0.259   N261
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o21
+    SLICE_X31Y18.B2      net (fanout=10)       1.009   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o
+    SLICE_X31Y18.B       Tilo                  0.259   FFT_Module_Instance/aValM1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6_SW6
+    SLICE_X32Y18.D2      net (fanout=1)        0.751   N280
+    SLICE_X32Y18.BMUX    Topdb                 0.430   FFT_Module_Instance/AnalyzerConditionRe1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_4_f7
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_2_f8
+    SLICE_X15Y16.A3      net (fanout=24)       2.013   FFT_Module_Instance/AnalyzerConditionRe1
+    SLICE_X15Y16.A       Tilo                  0.259   FFT_Module_Instance/AnalyzerOutputIm<8>
+                                                       FFT_Module_Instance/Mmux_AnalyzerOutputIm111
+    SLICE_X34Y2.CX       net (fanout=8)        3.359   FFT_Module_Instance/AnalyzerOutputIm<8>
+    SLICE_X34Y2.CLK      Tds                   0.291   FFT_Module_Instance/Mram_AnalyzerStored17_RAMD_O
+                                                       FFT_Module_Instance/Mram_AnalyzerStored17_RAMC
+    -------------------------------------------------  ---------------------------
+    Total                                     18.935ns (6.041ns logic, 12.894ns route)
+                                                       (31.9% logic, 68.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.167ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1 (FF)
+  Destination:          FFT_Module_Instance/Mram_AnalyzerStored17_RAMC (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      18.818ns (Levels of Logic = 8)
+  Clock Path Skew:      0.020ns (0.468 - 0.448)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1 to FFT_Module_Instance/Mram_AnalyzerStored17_RAMC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y17.AQ      Tcko                  0.476   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1
+    SLICE_X20Y17.A3      net (fanout=1)        0.945   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9_1
+    SLICE_X20Y17.A       Tilo                  0.235   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11_1
+    SLICE_X21Y16.A4      net (fanout=2)        0.488   FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11
+    SLICE_X21Y16.A       Tilo                  0.259   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11_1
+    DSP48_X1Y6.A8        net (fanout=8)        1.677   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+    DSP48_X1Y6.M10       Tdspdo_A_M            3.265   FFT_Module_Instance/Mmult_bValIndMult1
+                                                       FFT_Module_Instance/Mmult_bValIndMult1
+    SLICE_X33Y21.D1      net (fanout=4)        1.960   FFT_Module_Instance/bValIndMult1<10>
+    SLICE_X33Y21.D       Tilo                  0.259   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o3
+    SLICE_X33Y20.B5      net (fanout=1)        0.624   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o1
+    SLICE_X33Y20.B       Tilo                  0.259   N261
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o21
+    SLICE_X31Y18.B2      net (fanout=10)       1.009   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_193_o
+    SLICE_X31Y18.B       Tilo                  0.259   FFT_Module_Instance/aValM1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6_SW6
+    SLICE_X32Y18.D2      net (fanout=1)        0.751   N280
+    SLICE_X32Y18.BMUX    Topdb                 0.430   FFT_Module_Instance/AnalyzerConditionRe1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_6
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_4_f7
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_2_f8
+    SLICE_X15Y16.A3      net (fanout=24)       2.013   FFT_Module_Instance/AnalyzerConditionRe1
+    SLICE_X15Y16.A       Tilo                  0.259   FFT_Module_Instance/AnalyzerOutputIm<8>
+                                                       FFT_Module_Instance/Mmux_AnalyzerOutputIm111
+    SLICE_X34Y2.CX       net (fanout=8)        3.359   FFT_Module_Instance/AnalyzerOutputIm<8>
+    SLICE_X34Y2.CLK      Tds                   0.291   FFT_Module_Instance/Mram_AnalyzerStored17_RAMD_O
+                                                       FFT_Module_Instance/Mram_AnalyzerStored17_RAMC
+    -------------------------------------------------  ---------------------------
+    Total                                     18.818ns (5.992ns logic, 12.826ns route)
+                                                       (31.8% logic, 68.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.186ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               FFT_Module_Instance/FFTCount_13 (FF)
+  Destination:          FFT_Module_Instance/Mram_AnalyzerStored17_RAMC (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      18.809ns (Levels of Logic = 8)
+  Clock Path Skew:      0.030ns (0.468 - 0.438)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: FFT_Module_Instance/FFTCount_13 to FFT_Module_Instance/Mram_AnalyzerStored17_RAMC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y20.BQ      Tcko                  0.525   FFT_Module_Instance/FFTCount<15>
+                                                       FFT_Module_Instance/FFTCount_13
+    SLICE_X20Y17.A2      net (fanout=13)       1.013   FFT_Module_Instance/FFTCount<13>
+    SLICE_X20Y17.A       Tilo                  0.235   DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8_1
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11_1
+    SLICE_X21Y16.A4      net (fanout=2)        0.488   FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11
+    SLICE_X21Y16.A       Tilo                  0.259   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+                                                       FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11_1
+    DSP48_X1Y6.A8        net (fanout=8)        1.677   FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<8>11
+    DSP48_X1Y6.M15       Tdspdo_A_M            3.265   FFT_Module_Instance/Mmult_bValIndMult1
+                                                       FFT_Module_Instance/Mmult_bValIndMult1
+    SLICE_X33Y23.B1      net (fanout=6)        1.469   FFT_Module_Instance/bValIndMult1<15>
+    SLICE_X33Y23.B       Tilo                  0.259   N106
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_183_o1_SW2
+    SLICE_X33Y23.A2      net (fanout=2)        1.004   N106
+    SLICE_X33Y23.A       Tilo                  0.259   N106
+                                                       FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_183_o21
+    SLICE_X30Y20.D4      net (fanout=9)        0.796   FFT_Module_Instance/GND_3_o_bValIndMult1[17]_LessThan_183_o
+    SLICE_X30Y20.D       Tilo                  0.254   FFT_Module_Instance/aVal1_6
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_5_SW6
+    SLICE_X32Y18.B2      net (fanout=1)        0.961   N260
+    SLICE_X32Y18.BMUX    Topbb                 0.423   FFT_Module_Instance/AnalyzerConditionRe1
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_5
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_3_f7
+                                                       FFT_Module_Instance/Mmux_AnalyzerConditionRe1_2_f8
+    SLICE_X15Y16.A3      net (fanout=24)       2.013   FFT_Module_Instance/AnalyzerConditionRe1
+    SLICE_X15Y16.A       Tilo                  0.259   FFT_Module_Instance/AnalyzerOutputIm<8>
+                                                       FFT_Module_Instance/Mmux_AnalyzerOutputIm111
+    SLICE_X34Y2.CX       net (fanout=8)        3.359   FFT_Module_Instance/AnalyzerOutputIm<8>
+    SLICE_X34Y2.CLK      Tds                   0.291   FFT_Module_Instance/Mram_AnalyzerStored17_RAMD_O
+                                                       FFT_Module_Instance/Mram_AnalyzerStored17_RAMC
+    -------------------------------------------------  ---------------------------
+    Total                                     18.809ns (6.029ns logic, 12.780ns route)
+                                                       (32.1% logic, 67.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point FFT_Module_Instance/IFFT_IP_CORE_Instance/blk0000002d/blk00000056 (RAMB8_X1Y20.ADDRBRDADDR10), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.265ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               FFT_Module_Instance/IFFT_IP_CORE_Instance/blk0000082c (FF)
+  Destination:          FFT_Module_Instance/IFFT_IP_CORE_Instance/blk0000002d/blk00000056 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.268ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.117 - 0.114)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: FFT_Module_Instance/IFFT_IP_CORE_Instance/blk0000082c to FFT_Module_Instance/IFFT_IP_CORE_Instance/blk0000002d/blk00000056
+    Location                  Delay type         Delay(ns)  Physical Resource
+                                                            Logical Resource(s)
+    ------------------------------------------------------  -------------------
+    SLICE_X32Y42.CQ           Tcko                  0.200   FFT_Module_Instance/IFFT_IP_CORE_Instance/sig00000038
+                                                            FFT_Module_Instance/IFFT_IP_CORE_Instance/blk0000082c
+    RAMB8_X1Y20.ADDRBRDADDR10 net (fanout=2)        0.134   FFT_Module_Instance/IFFT_IP_CORE_Instance/sig00000036
+    RAMB8_X1Y20.CLKBRDCLK     Trckc_ADDRB (-Th)     0.066   FFT_Module_Instance/IFFT_IP_CORE_Instance/blk0000002d/blk00000056
+                                                            FFT_Module_Instance/IFFT_IP_CORE_Instance/blk0000002d/blk00000056
+    ------------------------------------------------------  ---------------------------
+    Total                                           0.268ns (0.134ns logic, 0.134ns route)
+                                                            (50.0% logic, 50.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point FFT_Module_Instance/IFFT_IP_CORE_Instance/blk00000003/blk0000002b (RAMB8_X1Y21.DIBDI12), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.268ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               FFT_Module_Instance/IFFT_IP_CORE_Instance/blk000006f7 (FF)
+  Destination:          FFT_Module_Instance/IFFT_IP_CORE_Instance/blk00000003/blk0000002b (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.270ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.119 - 0.117)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: FFT_Module_Instance/IFFT_IP_CORE_Instance/blk000006f7 to FFT_Module_Instance/IFFT_IP_CORE_Instance/blk00000003/blk0000002b
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y43.AQ      Tcko                  0.198   FFT_Module_Instance/IFFT_IP_CORE_Instance/sig00000098
+                                                       FFT_Module_Instance/IFFT_IP_CORE_Instance/blk000006f7
+    RAMB8_X1Y21.DIBDI12  net (fanout=1)        0.125   FFT_Module_Instance/IFFT_IP_CORE_Instance/sig000000ae
+    RAMB8_X1Y21.CLKAWRCLKTrckd_DIB   (-Th)     0.053   FFT_Module_Instance/IFFT_IP_CORE_Instance/blk00000003/blk0000002b
+                                                       FFT_Module_Instance/IFFT_IP_CORE_Instance/blk00000003/blk0000002b
+    -------------------------------------------------  ---------------------------
+    Total                                      0.270ns (0.145ns logic, 0.125ns route)
+                                                       (53.7% logic, 46.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point FFT_Module_Instance/IFFT_IP_CORE_Instance/blk00000003/blk0000002b (RAMB8_X1Y21.DIADI2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.295ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               FFT_Module_Instance/IFFT_IP_CORE_Instance/blk000006c7 (FF)
+  Destination:          FFT_Module_Instance/IFFT_IP_CORE_Instance/blk00000003/blk0000002b (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.304ns (Levels of Logic = 0)
+  Clock Path Skew:      0.009ns (0.119 - 0.110)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: FFT_Module_Instance/IFFT_IP_CORE_Instance/blk000006c7 to FFT_Module_Instance/IFFT_IP_CORE_Instance/blk00000003/blk0000002b
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y42.AQ      Tcko                  0.198   FFT_Module_Instance/IFFT_IP_CORE_Instance/sig00000093
+                                                       FFT_Module_Instance/IFFT_IP_CORE_Instance/blk000006c7
+    RAMB8_X1Y21.DIADI2   net (fanout=1)        0.159   FFT_Module_Instance/IFFT_IP_CORE_Instance/sig00000091
+    RAMB8_X1Y21.CLKAWRCLKTrckd_DIA   (-Th)     0.053   FFT_Module_Instance/IFFT_IP_CORE_Instance/blk00000003/blk0000002b
+                                                       FFT_Module_Instance/IFFT_IP_CORE_Instance/blk00000003/blk0000002b
+    -------------------------------------------------  ---------------------------
+    Total                                      0.304ns (0.145ns logic, 0.159ns route)
+                                                       (47.7% logic, 52.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: FFT_Module_Instance/Mram_FFTStored3/CLKA
+  Logical resource: FFT_Module_Instance/Mram_FFTStored3/CLKA
+  Location pin: RAMB16_X0Y12.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
+  Physical resource: FFT_Module_Instance/Mram_FFTStored3/CLKB
+  Logical resource: FFT_Module_Instance/Mram_FFTStored3/CLKB
+  Location pin: RAMB16_X0Y12.CLKB
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: FFT_Module_Instance/FFT_IP_CORE_Instance/blk00000003/blk0000002b/CLKAWRCLK
+  Logical resource: FFT_Module_Instance/FFT_IP_CORE_Instance/blk00000003/blk0000002b/CLKAWRCLK
+  Location pin: RAMB8_X0Y23.CLKAWRCLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   19.028|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 24512917 paths, 0 nets, and 20145 connections
+
+Design statistics:
+   Minimum period:  19.028ns{1}   (Maximum frequency:  52.554MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Aug 04 22:49:37 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 226 MB
+
+
+
