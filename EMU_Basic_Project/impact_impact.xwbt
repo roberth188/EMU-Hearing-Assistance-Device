@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\impact.xsl
+OUTFILE=C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData
+LICENSE=iMPACT
+USER_INFO=iMPACT

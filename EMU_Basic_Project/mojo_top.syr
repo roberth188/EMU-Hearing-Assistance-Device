@@ -1,0 +1,1202 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.52 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.53 secs
+ 
+--> Reading design: mojo_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mojo_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mojo_top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg225
+
+---- Source Options
+Top Module Name                    : mojo_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\ipcore_dir\Translation_Module_DM.v" into library work
+Parsing module <Translation_Module_DM>.
+Analyzing Verilog file "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\ipcore_dir\FFT_IFFT_IP_CORE.v" into library work
+Parsing module <FFT_IFFT_IP_CORE>.
+Analyzing Verilog file "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" into library work
+Parsing module <FFT_Module>.
+Analyzing Verilog file "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\DM_TLV5619_DAC_Interface_Module.v" into library work
+Parsing module <DM_TLV5619_DAC_Interface_Module>.
+Analyzing Verilog file "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\DigiMic_Interface.v" into library work
+Parsing module <DigiMic_Interface>.
+Analyzing Verilog file "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\src\mojo_top.v" into library work
+Parsing module <mojo_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mojo_top>.
+
+Elaborating module <DigiMic_Interface>.
+WARNING:HDLCompiler:413 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\DigiMic_Interface.v" Line 71: Result of 14-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\DigiMic_Interface.v" Line 78: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <FFT_Module>.
+WARNING:HDLCompiler:413 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 108: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 122: Result of 33-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 133: Assignment to FFTOutputWE ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 134: Assignment to FFTOutputIndex ignored, since the identifier is never used
+
+Elaborating module <FFT_IFFT_IP_CORE>.
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 149: Assignment to RFD ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 151: Assignment to BUSY ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 152: Assignment to EDONE ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 243: Assignment to AnalyzerInterval ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 249: Result of 11-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 251: Result of 7-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 251: Assignment to AnalyzerCount ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 958: Assignment to IRFD ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 960: Assignment to IBUSY ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 961: Assignment to IEDONE ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 966: Assignment to IXK_IM ignored, since the identifier is never used
+
+Elaborating module <Translation_Module_DM>.
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 978: Assignment to X_OUT1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 980: Assignment to RDY1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 981: Assignment to RFD1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 989: Assignment to X_OUT2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 991: Assignment to RDY2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 992: Assignment to RFD2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 1000: Assignment to X_OUT3 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 1002: Assignment to RDY3 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 1003: Assignment to RFD3 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 1011: Assignment to X_OUT4 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 1013: Assignment to RDY4 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" Line 1014: Assignment to RFD4 ignored, since the identifier is never used
+
+Elaborating module <DM_TLV5619_DAC_Interface_Module>.
+WARNING:HDLCompiler:413 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\DM_TLV5619_DAC_Interface_Module.v" Line 84: Result of 16-bit expression is truncated to fit in 15-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mojo_top>.
+    Related source file is "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\src\mojo_top.v".
+    Summary:
+	no macro.
+Unit <mojo_top> synthesized.
+
+Synthesizing Unit <DigiMic_Interface>.
+    Related source file is "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\DigiMic_Interface.v".
+WARNING:Xst - Value "{auto | block |  block_power1 | block_power2}" of property "RAM_STYLE" is not applicable. List of valid values is "auto, block, block_power1, block_power2, distributed, pipe_block, pipe_distributed" 
+WARNING:Xst - Value "{auto | block |  block_power1 | block_power2}" of property "RAM_STYLE" is not applicable. List of valid values is "auto, block, block_power1, block_power2, distributed, pipe_block, pipe_distributed" 
+WARNING:Xst - Value "{auto | block |  block_power1 | block_power2}" of property "RAM_STYLE" is not applicable. List of valid values is "auto, block, block_power1, block_power2, distributed, pipe_block, pipe_distributed" 
+WARNING:Xst - Value "{auto | block |  block_power1 | block_power2}" of property "RAM_STYLE" is not applicable. List of valid values is "auto, block, block_power1, block_power2, distributed, pipe_block, pipe_distributed" 
+    Found 1024x9-bit dual-port RAM <Mram_StoredDMValues1> for signal <StoredDMValues1>.
+    Found 1024x9-bit dual-port RAM <Mram_StoredDMValues2> for signal <StoredDMValues2>.
+    Found 1024x9-bit dual-port RAM <Mram_StoredDMValues3> for signal <StoredDMValues3>.
+    Found 1024x9-bit dual-port RAM <Mram_StoredDMValues4> for signal <StoredDMValues4>.
+    Found 10-bit register for signal <DMLocationWritingTo>.
+    Found 9-bit register for signal <DMAdder1>.
+    Found 9-bit register for signal <DMAdder2>.
+    Found 9-bit register for signal <DMAdder3>.
+    Found 9-bit register for signal <DMAdder4>.
+    Found 9-bit register for signal <DesiredDMInterfaceOutput1>.
+    Found 9-bit register for signal <DesiredDMInterfaceOutput2>.
+    Found 9-bit register for signal <DesiredDMInterfaceOutput3>.
+    Found 9-bit register for signal <DesiredDMInterfaceOutput4>.
+    Found 13-bit register for signal <SampleDelayCount>.
+    Found 13-bit adder for signal <SampleDelayCount[12]_GND_2_o_add_2_OUT> created at line 71.
+    Found 10-bit adder for signal <DMLocationWritingTo[9]_GND_2_o_add_5_OUT> created at line 78.
+    Found 9-bit adder for signal <DMAdder1[8]_GND_2_o_add_9_OUT> created at line 102.
+    Found 9-bit adder for signal <DMAdder2[8]_GND_2_o_add_14_OUT> created at line 119.
+    Found 9-bit adder for signal <DMAdder3[8]_GND_2_o_add_19_OUT> created at line 136.
+    Found 9-bit adder for signal <DMAdder4[8]_GND_2_o_add_24_OUT> created at line 153.
+    Found 9-bit 4-to-1 multiplexer for signal <DesiredDMInterfaceOutput> created at line 212.
+    Summary:
+	inferred   4 RAM(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred  95 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <DigiMic_Interface> synthesized.
+
+Synthesizing Unit <FFT_Module>.
+    Related source file is "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v".
+WARNING:Xst:647 - Input <DMLocationWritingTo<9:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FioSp<13:13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 141: Output port <rfd> of the instance <FFT_IP_CORE_Instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 141: Output port <busy> of the instance <FFT_IP_CORE_Instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 141: Output port <edone> of the instance <FFT_IP_CORE_Instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 950: Output port <xk_im> of the instance <IFFT_IP_CORE_Instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 950: Output port <rfd> of the instance <IFFT_IP_CORE_Instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 950: Output port <busy> of the instance <IFFT_IP_CORE_Instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 950: Output port <edone> of the instance <IFFT_IP_CORE_Instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 974: Output port <x_out> of the instance <Translation_Module_DM_Instance1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 974: Output port <rdy> of the instance <Translation_Module_DM_Instance1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 974: Output port <rfd> of the instance <Translation_Module_DM_Instance1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 985: Output port <x_out> of the instance <Translation_Module_DM_Instance2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 985: Output port <rdy> of the instance <Translation_Module_DM_Instance2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 985: Output port <rfd> of the instance <Translation_Module_DM_Instance2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 996: Output port <x_out> of the instance <Translation_Module_DM_Instance3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 996: Output port <rdy> of the instance <Translation_Module_DM_Instance3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 996: Output port <rfd> of the instance <Translation_Module_DM_Instance3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 1007: Output port <x_out> of the instance <Translation_Module_DM_Instance4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 1007: Output port <rdy> of the instance <Translation_Module_DM_Instance4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\FFT_and_IFFT_Module.v" line 1007: Output port <rfd> of the instance <Translation_Module_DM_Instance4> is unconnected or connected to loadless signal.
+    Found 512x24-bit dual-port RAM <Mram_FFTStored1> for signal <FFTStored1>.
+    Found 512x24-bit dual-port RAM <Mram_FFTStored2> for signal <FFTStored2>.
+    Found 512x24-bit dual-port RAM <Mram_FFTStored3> for signal <FFTStored3>.
+    Found 512x24-bit dual-port RAM <Mram_FFTStored4> for signal <FFTStored4>.
+    Found 512x24-bit dual-port RAM <Mram_AnalyzerStored> for signal <AnalyzerStored>.
+    Found 18-bit register for signal <FFTStoredOutput1>.
+    Found 18-bit register for signal <FFTStoredOutput2>.
+    Found 24-bit register for signal <FFTStoredOutput3>.
+    Found 18-bit register for signal <FFTStoredOutput4>.
+    Found 18-bit register for signal <AnalyzerStoredOutput>.
+    Found 24-bit register for signal <FFTCount>.
+    Found 8-bit subtractor for signal <P1a[7]_P2a[7]_sub_187_OUT> created at line 640.
+    Found 8-bit subtractor for signal <P2a[7]_P1a[7]_sub_195_OUT> created at line 646.
+    Found 8-bit subtractor for signal <P2a[7]_P3a[7]_sub_268_OUT> created at line 704.
+    Found 8-bit subtractor for signal <P3a[7]_P2a[7]_sub_276_OUT> created at line 710.
+    Found 8-bit subtractor for signal <P1a[7]_P3a[7]_sub_349_OUT> created at line 771.
+    Found 8-bit subtractor for signal <P3a[7]_P1a[7]_sub_357_OUT> created at line 777.
+    Found 8-bit subtractor for signal <P1a[7]_P4a[7]_sub_430_OUT> created at line 837.
+    Found 8-bit subtractor for signal <P4a[7]_P1a[7]_sub_438_OUT> created at line 843.
+    Found 24-bit adder for signal <FFTCount[23]_GND_3_o_add_2_OUT> created at line 108.
+    Found 10-bit adder for signal <DesiredDMMemoryLocationToRead> created at line 122.
+    Found 9-bit adder for signal <IXN_INDEX[8]_GND_3_o_add_450_OUT> created at line 913.
+    Found 9-bit subtractor for signal <FFTStoredOutputIndex> created at line 187.
+    Found 9x9-bit multiplier for signal <aValIndMult1> created at line 582.
+    Found 9x9-bit multiplier for signal <bValIndMult1> created at line 583.
+    Found 9x9-bit multiplier for signal <aValIndMult2> created at line 585.
+    Found 9x9-bit multiplier for signal <bValIndMult2> created at line 586.
+    Found 9x9-bit multiplier for signal <aValIndMult3> created at line 588.
+    Found 9x9-bit multiplier for signal <bValIndMult3> created at line 589.
+    Found 9x9-bit multiplier for signal <aValIndMult4> created at line 591.
+    Found 9x9-bit multiplier for signal <bValIndMult4> created at line 592.
+    Found 1-bit 16-to-1 multiplexer for signal <AnalyzerConditionRe1> created at line 599.
+    Found 1-bit 16-to-1 multiplexer for signal <AnalyzerConditionRe2> created at line 663.
+    Found 1-bit 16-to-1 multiplexer for signal <AnalyzerConditionRe3> created at line 730.
+    Found 1-bit 16-to-1 multiplexer for signal <AnalyzerConditionRe4> created at line 796.
+WARNING:Xst:737 - Found 1-bit latch for signal <aValFr1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aValM1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal1<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal1<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bValFr1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bValM1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal1<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal1<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aValFr2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aValM2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal2<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal2<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal2<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal2<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal2<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal2<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal2<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bValFr2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bValM2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal2<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal2<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal2<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal2<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal2<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal2<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal2<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aValFr3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aValM3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal3<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal3<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal3<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal3<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal3<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal3<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal3<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal3<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bValFr3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bValM3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal3<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal3<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal3<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal3<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal3<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal3<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal3<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal3<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aValFr4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aValM4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal4<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal4<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal4<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal4<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal4<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal4<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal4<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <aVal4<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bValFr4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bValM4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal4<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal4<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal4<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal4<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal4<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal4<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal4<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bVal4<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 24-bit comparator greater for signal <FFTStartNumber[1]_INV_7_o> created at line 113
+    Found 24-bit comparator lessequal for signal <n0009> created at line 113
+    Found 24-bit comparator lessequal for signal <n0012> created at line 113
+    Found 9-bit comparator lessequal for signal <n0189> created at line 555
+    Found 1-bit comparator equal for signal <aValF1> created at line 555
+    Found 1-bit comparator equal for signal <bValF1> created at line 556
+    Found 1-bit comparator equal for signal <aValF2> created at line 558
+    Found 1-bit comparator equal for signal <bValF2> created at line 559
+    Found 1-bit comparator equal for signal <aValF3> created at line 561
+    Found 1-bit comparator equal for signal <bValF3> created at line 562
+    Found 1-bit comparator equal for signal <aValF4> created at line 564
+    Found 1-bit comparator equal for signal <bValF4> created at line 565
+    Found 18-bit comparator lessequal for signal <n0213> created at line 610
+    Found 18-bit comparator lessequal for signal <n0223> created at line 622
+    Found 18-bit comparator lessequal for signal <n0233> created at line 634
+    Found 18-bit comparator lessequal for signal <n0237> created at line 637
+    Found 18-bit comparator lessequal for signal <n0242> created at line 640
+    Found 18-bit comparator lessequal for signal <n0246> created at line 643
+    Found 18-bit comparator lessequal for signal <n0251> created at line 646
+    Found 18-bit comparator lessequal for signal <n0253> created at line 646
+    Found 18-bit comparator lessequal for signal <n0265> created at line 674
+    Found 18-bit comparator lessequal for signal <n0275> created at line 686
+    Found 18-bit comparator lessequal for signal <n0285> created at line 698
+    Found 18-bit comparator lessequal for signal <n0289> created at line 701
+    Found 18-bit comparator lessequal for signal <n0294> created at line 704
+    Found 18-bit comparator lessequal for signal <n0298> created at line 707
+    Found 18-bit comparator lessequal for signal <n0303> created at line 710
+    Found 18-bit comparator lessequal for signal <n0305> created at line 710
+    Found 18-bit comparator lessequal for signal <n0316> created at line 741
+    Found 18-bit comparator lessequal for signal <n0326> created at line 753
+    Found 18-bit comparator lessequal for signal <n0336> created at line 765
+    Found 18-bit comparator lessequal for signal <n0340> created at line 768
+    Found 18-bit comparator lessequal for signal <n0345> created at line 771
+    Found 18-bit comparator lessequal for signal <n0349> created at line 774
+    Found 18-bit comparator lessequal for signal <n0354> created at line 777
+    Found 18-bit comparator lessequal for signal <n0356> created at line 777
+    Found 18-bit comparator lessequal for signal <n0367> created at line 807
+    Found 18-bit comparator lessequal for signal <n0377> created at line 819
+    Found 18-bit comparator lessequal for signal <n0387> created at line 831
+    Found 18-bit comparator lessequal for signal <n0391> created at line 834
+    Found 18-bit comparator lessequal for signal <n0396> created at line 837
+    Found 18-bit comparator lessequal for signal <n0400> created at line 840
+    Found 18-bit comparator lessequal for signal <n0405> created at line 843
+    Found 18-bit comparator lessequal for signal <n0407> created at line 843
+    Found 24-bit comparator lessequal for signal <n0420> created at line 900
+    Found 24-bit comparator lessequal for signal <n0422> created at line 900
+    Found 9-bit comparator lessequal for signal <n0431> created at line 920
+    Found 9-bit comparator lessequal for signal <n0433> created at line 920
+    Summary:
+	inferred   5 RAM(s).
+	inferred   8 Multiplier(s).
+	inferred  12 Adder/Subtractor(s).
+	inferred 120 D-type flip-flop(s).
+	inferred  80 Latch(s).
+	inferred  48 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <FFT_Module> synthesized.
+
+Synthesizing Unit <DM_TLV5619_DAC_Interface_Module>.
+    Related source file is "C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\DM_TLV5619_DAC_Interface_Module.v".
+WARNING:Xst - Value "{auto | block |  block_power1 | block_power2}" of property "RAM_STYLE" is not applicable. List of valid values is "auto, block, block_power1, block_power2, distributed, pipe_block, pipe_distributed" 
+    Found 1024x12-bit dual-port RAM <Mram_StoredDACValues> for signal <StoredDACValues>.
+    Found 15-bit register for signal <DACDelayCount>.
+    Found 12-bit register for signal <DACDataInput>.
+    Found 10-bit adder for signal <DMLocationWritingTo[9]_GND_95_o_add_3_OUT> created at line 71.
+    Found 15-bit adder for signal <DACDelayCount[14]_GND_95_o_add_7_OUT> created at line 84.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+Unit <DM_TLV5619_DAC_Interface_Module> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 10
+ 1024x12-bit dual-port RAM                             : 1
+ 1024x9-bit dual-port RAM                              : 4
+ 512x24-bit dual-port RAM                              : 5
+# Multipliers                                          : 8
+ 9x9-bit multiplier                                    : 8
+# Adders/Subtractors                                   : 20
+ 10-bit adder                                          : 3
+ 13-bit adder                                          : 1
+ 15-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 8-bit subtractor                                      : 8
+ 9-bit adder                                           : 5
+ 9-bit subtractor                                      : 1
+# Registers                                            : 18
+ 10-bit register                                       : 1
+ 12-bit register                                       : 1
+ 13-bit register                                       : 1
+ 15-bit register                                       : 1
+ 18-bit register                                       : 4
+ 24-bit register                                       : 2
+ 9-bit register                                        : 8
+# Latches                                              : 80
+ 1-bit latch                                           : 80
+# Comparators                                          : 48
+ 1-bit comparator equal                                : 8
+ 18-bit comparator lessequal                           : 32
+ 24-bit comparator greater                             : 1
+ 24-bit comparator lessequal                           : 4
+ 9-bit comparator lessequal                            : 3
+# Multiplexers                                         : 9
+ 1-bit 16-to-1 multiplexer                             : 4
+ 12-bit 2-to-1 multiplexer                             : 2
+ 9-bit 2-to-1 multiplexer                              : 2
+ 9-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/FFT_IFFT_IP_CORE.ngc>.
+Reading Secure Unit <blk000001fe>.
+Reading core <ipcore_dir/Translation_Module_DM.ngc>.
+Reading Secure Unit <blk0000001a>.
+Loading core <FFT_IFFT_IP_CORE> for timing and area information for instance <FFT_IP_CORE_Instance>.
+Loading core <FFT_IFFT_IP_CORE> for timing and area information for instance <IFFT_IP_CORE_Instance>.
+Loading core <Translation_Module_DM> for timing and area information for instance <Translation_Module_DM_Instance1>.
+Loading core <Translation_Module_DM> for timing and area information for instance <Translation_Module_DM_Instance2>.
+Loading core <Translation_Module_DM> for timing and area information for instance <Translation_Module_DM_Instance3>.
+Loading core <Translation_Module_DM> for timing and area information for instance <Translation_Module_DM_Instance4>.
+WARNING:Xst:1710 - FF/Latch <aVal1_8> (without init value) has a constant value of 0 in block <FFT_Module_Instance>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <aVal2_8> (without init value) has a constant value of 0 in block <FFT_Module_Instance>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <aVal3_8> (without init value) has a constant value of 0 in block <FFT_Module_Instance>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <aVal4_8> (without init value) has a constant value of 0 in block <FFT_Module_Instance>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <bVal4_8> (without init value) has a constant value of 0 in block <FFT_Module_Instance>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <bVal3_8> (without init value) has a constant value of 0 in block <FFT_Module_Instance>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <bVal2_8> (without init value) has a constant value of 0 in block <FFT_Module_Instance>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <bVal1_8> (without init value) has a constant value of 0 in block <FFT_Module_Instance>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <DM_TLV5619_DAC_Interface_Module>.
+The following registers are absorbed into counter <DACDelayCount>: 1 register on signal <DACDelayCount>.
+INFO:Xst:3226 - The RAM <Mram_StoredDACValues> will be implemented as a BLOCK RAM, absorbing the following register(s): <DACDataInput>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 12-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <IFFTOutputWE>  | high     |
+    |     addrA          | connected to signal <(DMLocationWritingTo[9]_INV_46_o,IFFTOutputIndex)> |          |
+    |     diA            | connected to signal <IFFTOutput>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 12-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     addrB          | connected to signal <DMLocationWritingTo[9]_GND_95_o_add_3_OUT> |          |
+    |     doB            | connected to signal <DACDataInput>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <DM_TLV5619_DAC_Interface_Module> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DigiMic_Interface>.
+The following registers are absorbed into counter <SampleDelayCount>: 1 register on signal <SampleDelayCount>.
+The following registers are absorbed into accumulator <DMAdder1>: 1 register on signal <DMAdder1>.
+The following registers are absorbed into counter <DMLocationWritingTo>: 1 register on signal <DMLocationWritingTo>.
+The following registers are absorbed into accumulator <DMAdder2>: 1 register on signal <DMAdder2>.
+The following registers are absorbed into accumulator <DMAdder3>: 1 register on signal <DMAdder3>.
+The following registers are absorbed into accumulator <DMAdder4>: 1 register on signal <DMAdder4>.
+INFO:Xst:3226 - The RAM <Mram_StoredDMValues1> will be implemented as a BLOCK RAM, absorbing the following register(s): <DesiredDMInterfaceOutput1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 9-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | low      |
+    |     addrA          | connected to signal <DMLocationWritingTo> |          |
+    |     diA            | connected to signal <DMAdder1>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 9-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     addrB          | connected to signal <DesiredDMMemoryLocationToRead> |          |
+    |     doB            | connected to signal <DesiredDMInterfaceOutput1> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_StoredDMValues2> will be implemented as a BLOCK RAM, absorbing the following register(s): <DesiredDMInterfaceOutput2>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 9-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | low      |
+    |     addrA          | connected to signal <DMLocationWritingTo> |          |
+    |     diA            | connected to signal <DMAdder2>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 9-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     addrB          | connected to signal <DesiredDMMemoryLocationToRead> |          |
+    |     doB            | connected to signal <DesiredDMInterfaceOutput2> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_StoredDMValues3> will be implemented as a BLOCK RAM, absorbing the following register(s): <DesiredDMInterfaceOutput3>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 9-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | low      |
+    |     addrA          | connected to signal <DMLocationWritingTo> |          |
+    |     diA            | connected to signal <DMAdder3>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 9-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     addrB          | connected to signal <DesiredDMMemoryLocationToRead> |          |
+    |     doB            | connected to signal <DesiredDMInterfaceOutput3> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_StoredDMValues4> will be implemented as a BLOCK RAM, absorbing the following register(s): <DesiredDMInterfaceOutput4>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 9-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | low      |
+    |     addrA          | connected to signal <DMLocationWritingTo> |          |
+    |     diA            | connected to signal <DMAdder4>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 9-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     addrB          | connected to signal <DesiredDMMemoryLocationToRead> |          |
+    |     doB            | connected to signal <DesiredDMInterfaceOutput4> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <DigiMic_Interface> synthesized (advanced).
+
+Synthesizing (advanced) Unit <FFT_Module>.
+The following registers are absorbed into counter <FFTCount>: 1 register on signal <FFTCount>.
+INFO:Xst:3226 - The RAM <Mram_FFTStored3> will be implemented as a BLOCK RAM, absorbing the following register(s): <FFTStoredOutput3>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 24-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <XK_INDEX>      |          |
+    |     diA            | connected to signal <(XK_RE,XK_IM)> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 512-word x 24-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     addrB          | connected to signal <FFTStoredOutputIndex> |          |
+    |     doB            | connected to signal <FFTStoredOutput3> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_FFTStored1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 24-bit                   |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <XK_INDEX>      |          |
+    |     diA            | connected to signal <(XK_RE,XK_IM)> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 512-word x 24-bit                   |          |
+    |     addrB          | connected to signal <FFTStoredOutputIndex> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_FFTStored2> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 24-bit                   |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <XK_INDEX>      |          |
+    |     diA            | connected to signal <(XK_RE,XK_IM)> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 512-word x 24-bit                   |          |
+    |     addrB          | connected to signal <FFTStoredOutputIndex> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_FFTStored4> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 24-bit                   |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <XK_INDEX>      |          |
+    |     diA            | connected to signal <(XK_RE,XK_IM)> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 512-word x 24-bit                   |          |
+    |     addrB          | connected to signal <FFTStoredOutputIndex> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_AnalyzerStored> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 24-bit                   |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <AnalyzerOutputWE> | high     |
+    |     addrA          | connected to signal <FFTStoredOutputIndex> |          |
+    |     diA            | connected to signal <(AnalyzerOutputRe,AnalyzerOutputIm)> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 512-word x 24-bit                   |          |
+    |     addrB          | connected to signal <IXN_INDEX[8]_GND_3_o_add_450_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <FFT_Module> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 10
+ 1024x12-bit dual-port block RAM                       : 1
+ 1024x9-bit dual-port block RAM                        : 4
+ 512x24-bit dual-port block RAM                        : 1
+ 512x24-bit dual-port distributed RAM                  : 4
+# Multipliers                                          : 8
+ 9x9-bit multiplier                                    : 8
+# Adders/Subtractors                                   : 12
+ 10-bit adder                                          : 2
+ 8-bit subtractor                                      : 8
+ 9-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 1
+ 13-bit up counter                                     : 1
+ 15-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Accumulators                                         : 4
+ 9-bit up accumulator                                  : 4
+# Registers                                            : 72
+ Flip-Flops                                            : 72
+# Comparators                                          : 48
+ 1-bit comparator equal                                : 8
+ 18-bit comparator lessequal                           : 32
+ 24-bit comparator greater                             : 1
+ 24-bit comparator lessequal                           : 4
+ 9-bit comparator lessequal                            : 3
+# Multiplexers                                         : 9
+ 1-bit 16-to-1 multiplexer                             : 4
+ 12-bit 2-to-1 multiplexer                             : 2
+ 9-bit 2-to-1 multiplexer                              : 2
+ 9-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <aVal2_8> (without init value) has a constant value of 0 in block <FFT_Module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <aVal1_8> (without init value) has a constant value of 0 in block <FFT_Module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <aVal3_8> (without init value) has a constant value of 0 in block <FFT_Module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <aVal4_8> (without init value) has a constant value of 0 in block <FFT_Module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <bVal4_8> (without init value) has a constant value of 0 in block <FFT_Module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <bVal3_8> (without init value) has a constant value of 0 in block <FFT_Module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <bVal2_8> (without init value) has a constant value of 0 in block <FFT_Module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <bVal1_8> (without init value) has a constant value of 0 in block <FFT_Module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Mram_FFTStored42> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored41> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored45> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored43> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored44> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored46> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored47> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored48> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored433> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored434> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored435> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored436> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored439> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored437> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored438> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored440> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored11> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored14> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored12> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored13> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored15> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored16> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored17> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored18> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored133> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored134> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored135> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored138> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored136> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored137> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored139> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored140> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored23> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored21> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored22> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored24> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored25> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored26> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored27> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored28> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored233> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored234> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored237> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored235> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored236> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored240> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored238> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <Mram_FFTStored239> of sequential type is unconnected in block <FFT_Module>.
+WARNING:Xst:2677 - Node <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_13> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_14> of sequential type is unconnected in block <mojo_top>.
+
+Optimizing unit <mojo_top> ...
+
+Optimizing unit <FFT_Module> ...
+
+Optimizing unit <DigiMic_Interface> ...
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_10> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_10> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_11> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_11> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_12> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_12> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_0> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_0> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_1> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_1> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_2> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_2> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_3> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_3> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_4> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_4> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_5> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_5> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_6> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_6> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_7> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_7> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_8> 
+INFO:Xst:2261 - The FF/Latch <DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <FFT_Module_Instance/FFTCount_9> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 35.
+INFO:Xst:2260 - The FF/Latch <blk00000a0b> in Unit <FFT_Module_Instance/IFFT_IP_CORE_Instance> is equivalent to the following FF/Latch : <blk00000a40> 
+INFO:Xst:2260 - The FF/Latch <blk00000a0d> in Unit <FFT_Module_Instance/IFFT_IP_CORE_Instance> is equivalent to the following FF/Latch : <blk00000a3f> 
+INFO:Xst:2260 - The FF/Latch <blk00000a0b> in Unit <FFT_Module_Instance/FFT_IP_CORE_Instance> is equivalent to the following FF/Latch : <blk00000a40> 
+INFO:Xst:2260 - The FF/Latch <blk00000a0d> in Unit <FFT_Module_Instance/FFT_IP_CORE_Instance> is equivalent to the following FF/Latch : <blk00000a3f> 
+INFO:Xst:2260 - The FF/Latch <blk000001b5> in Unit <FFT_Module_Instance/Translation_Module_DM_Instance4> is equivalent to the following 3 FFs/Latches : <blk00000342> <blk00000343> <blk00000345> 
+INFO:Xst:2260 - The FF/Latch <blk000001b5> in Unit <FFT_Module_Instance/Translation_Module_DM_Instance3> is equivalent to the following 3 FFs/Latches : <blk00000342> <blk00000343> <blk00000345> 
+INFO:Xst:2260 - The FF/Latch <blk000001b5> in Unit <FFT_Module_Instance/Translation_Module_DM_Instance2> is equivalent to the following 3 FFs/Latches : <blk00000342> <blk00000343> <blk00000345> 
+INFO:Xst:2260 - The FF/Latch <blk000001b5> in Unit <FFT_Module_Instance/Translation_Module_DM_Instance1> is equivalent to the following 3 FFs/Latches : <blk00000342> <blk00000343> <blk00000345> 
+INFO:Xst:2260 - The FF/Latch <blk00000a0b> in Unit <FFT_Module_Instance/IFFT_IP_CORE_Instance> is equivalent to the following FF/Latch : <blk00000a40> 
+INFO:Xst:2260 - The FF/Latch <blk00000a0d> in Unit <FFT_Module_Instance/IFFT_IP_CORE_Instance> is equivalent to the following FF/Latch : <blk00000a3f> 
+INFO:Xst:2260 - The FF/Latch <blk00000a0b> in Unit <FFT_Module_Instance/FFT_IP_CORE_Instance> is equivalent to the following FF/Latch : <blk00000a40> 
+INFO:Xst:2260 - The FF/Latch <blk00000a0d> in Unit <FFT_Module_Instance/FFT_IP_CORE_Instance> is equivalent to the following FF/Latch : <blk00000a3f> 
+INFO:Xst:2260 - The FF/Latch <blk000001b5> in Unit <FFT_Module_Instance/Translation_Module_DM_Instance4> is equivalent to the following 3 FFs/Latches : <blk00000342> <blk00000343> <blk00000345> 
+INFO:Xst:2260 - The FF/Latch <blk000001b5> in Unit <FFT_Module_Instance/Translation_Module_DM_Instance3> is equivalent to the following 3 FFs/Latches : <blk00000342> <blk00000343> <blk00000345> 
+INFO:Xst:2260 - The FF/Latch <blk000001b5> in Unit <FFT_Module_Instance/Translation_Module_DM_Instance2> is equivalent to the following 3 FFs/Latches : <blk00000342> <blk00000343> <blk00000345> 
+INFO:Xst:2260 - The FF/Latch <blk000001b5> in Unit <FFT_Module_Instance/Translation_Module_DM_Instance1> is equivalent to the following 3 FFs/Latches : <blk00000342> <blk00000343> <blk00000345> 
+FlipFlop DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_10 has been replicated 2 time(s)
+FlipFlop DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_11 has been replicated 2 time(s)
+FlipFlop DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_8 has been replicated 2 time(s)
+FlipFlop DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_9 has been replicated 2 time(s)
+FlipFlop FFT_Module_Instance/FFTCount_14 has been replicated 1 time(s)
+FlipFlop FFT_Module_Instance/FFTCount_15 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 165
+ Flip-Flops                                            : 165
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 6147
+#      GND                         : 73
+#      INV                         : 109
+#      LUT1                        : 310
+#      LUT2                        : 829
+#      LUT3                        : 726
+#      LUT4                        : 298
+#      LUT5                        : 106
+#      LUT6                        : 889
+#      MUXCY                       : 1315
+#      MUXCY_D                     : 4
+#      MUXF7                       : 204
+#      MUXF8                       : 38
+#      VCC                         : 45
+#      XORCY                       : 1201
+# FlipFlops/Latches                : 3471
+#      FD                          : 915
+#      FDE                         : 1028
+#      FDR                         : 36
+#      FDRE                        : 1406
+#      FDS                         : 14
+#      LDE                         : 36
+#      LDE_1                       : 36
+# RAMS                             : 344
+#      RAM64M                      : 208
+#      RAM64X1S                    : 120
+#      RAMB16BWER                  : 2
+#      RAMB8BWER                   : 14
+# Shift Registers                  : 722
+#      SRL16E                      : 356
+#      SRLC16E                     : 332
+#      SRLC32E                     : 34
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 37
+#      IBUF                        : 18
+#      OBUF                        : 19
+# DSPs                             : 20
+#      DSP48A1                     : 20
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg225-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            3471  out of  18224    19%  
+ Number of Slice LUTs:                 4941  out of   9112    54%  
+    Number used as Logic:              3267  out of   9112    35%  
+    Number used as Memory:             1674  out of   2176    76%  
+       Number used as RAM:              952
+       Number used as SRL:              722
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   6883
+   Number with an unused Flip Flop:    3412  out of   6883    49%  
+   Number with an unused LUT:          1942  out of   6883    28%  
+   Number of fully used LUT-FF pairs:  1529  out of   6883    22%  
+   Number of unique control sets:        75
+
+IO Utilization: 
+ Number of IOs:                          39
+ Number of bonded IOBs:                  38  out of    160    23%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                9  out of     32    28%  
+    Number using Block RAM only:          9
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                     20  out of     32    62%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------------------------------------+-------------------------------------+-------+
+Clock Signal                                                                                             | Clock buffer(FF name)               | Load  |
+---------------------------------------------------------------------------------------------------------+-------------------------------------+-------+
+clk                                                                                                      | BUFGP                               | 4477  |
+FioSp<9>                                                                                                 | IBUF+BUFG                           | 36    |
+FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_42_o(FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_42_o<10>1:O)| NONE(*)(FFT_Module_Instance/aVal4_0)| 9     |
+FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_36_o(FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_36_o<10>1:O)| NONE(*)(FFT_Module_Instance/aVal3_0)| 9     |
+FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_30_o(FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_30_o<10>1:O)| NONE(*)(FFT_Module_Instance/aVal2_1)| 9     |
+FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_24_o(FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_24_o<10>1:O)| NONE(*)(FFT_Module_Instance/aVal1_0)| 9     |
+---------------------------------------------------------------------------------------------------------+-------------------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 16.014ns (Maximum Frequency: 62.445MHz)
+   Minimum input arrival time before clock: 4.754ns
+   Maximum output required time after clock: 7.769ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 16.014ns (frequency: 62.445MHz)
+  Total number of paths / destination ports: 24459073 / 8977
+-------------------------------------------------------------------------
+Delay:               16.014ns (Levels of Logic = 10)
+  Source:            DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_12 (FF)
+  Destination:       FFT_Module_Instance/Mram_AnalyzerStored64 (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_12 to FFT_Module_Instance/Mram_AnalyzerStored64
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             19   0.525   1.261  DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_12 (DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_12)
+     LUT6:I5->O            2   0.254   0.726  FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11_1 (FFT_Module_Instance/Msub_FFTStoredOutputIndex_cy<6>11)
+     LUT2:I1->O            8   0.254   0.943  FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<7>11_1 (FFT_Module_Instance/Msub_FFTStoredOutputIndex_xor<7>11)
+     DSP48A1:A7->M11       7   3.265   1.018  FFT_Module_Instance/Mmult_bValIndMult4 (FFT_Module_Instance/bValIndMult4<11>)
+     LUT4:I2->O            2   0.250   1.156  FFT_Module_Instance/Mcompar_bValIndMult4[17]_GND_3_o_LessThan_431_o_lutdi2 (FFT_Module_Instance/Mcompar_bValIndMult4[17]_GND_3_o_LessThan_431_o_lutdi2)
+     LUT6:I1->O            9   0.254   1.084  FFT_Module_Instance/GND_3_o_bValIndMult4[17]_LessThan_426_o21 (FFT_Module_Instance/GND_3_o_bValIndMult4[17]_LessThan_426_o)
+     LUT6:I4->O            1   0.250   0.958  FFT_Module_Instance/Mmux_AnalyzerConditionRe4_5_SW0 (N248)
+     LUT6:I2->O            1   0.254   0.000  FFT_Module_Instance/Mmux_AnalyzerConditionRe4_5 (FFT_Module_Instance/Mmux_AnalyzerConditionRe4_5)
+     MUXF7:I0->O           1   0.163   0.000  FFT_Module_Instance/Mmux_AnalyzerConditionRe4_3_f7 (FFT_Module_Instance/Mmux_AnalyzerConditionRe4_3_f7)
+     MUXF8:I1->O          24   0.152   1.656  FFT_Module_Instance/Mmux_AnalyzerConditionRe4_2_f8 (FFT_Module_Instance/AnalyzerConditionRe4)
+     LUT6:I2->O            8   0.254   0.943  FFT_Module_Instance/Mmux_AnalyzerOutputIm13 (FFT_Module_Instance/AnalyzerOutputIm<0>)
+     RAM64M:DIA                0.394          FFT_Module_Instance/Mram_AnalyzerStored2
+    ----------------------------------------
+    Total                     16.014ns (6.269ns logic, 9.745ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 228 / 228
+-------------------------------------------------------------------------
+Offset:              4.754ns (Levels of Logic = 2)
+  Source:            user_switch (PAD)
+  Destination:       FFT_Module_Instance/Mram_AnalyzerStored64 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: user_switch to FFT_Module_Instance/Mram_AnalyzerStored64
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            24   1.328   1.835  user_switch_IBUF (user_switch_IBUF)
+     LUT6:I0->O            8   0.254   0.943  FFT_Module_Instance/Mmux_AnalyzerOutputIm13 (FFT_Module_Instance/AnalyzerOutputIm<0>)
+     RAM64M:DIA                0.394          FFT_Module_Instance/Mram_AnalyzerStored2
+    ----------------------------------------
+    Total                      4.754ns (1.976ns logic, 2.778ns route)
+                                       (41.6% logic, 58.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FioSp<9>'
+  Total number of paths / destination ports: 144 / 72
+-------------------------------------------------------------------------
+Offset:              4.131ns (Levels of Logic = 2)
+  Source:            FioSp<10> (PAD)
+  Destination:       FFT_Module_Instance/bVal4_0 (LATCH)
+  Destination Clock: FioSp<9> rising
+
+  Data Path: FioSp<10> to FFT_Module_Instance/bVal4_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   1.032  FioSp_10_IBUF (FioSp_10_IBUF)
+     LUT3:I0->O           18   0.235   1.234  FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_42_o<10>1 (FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_42_o)
+     LDE_1:GE                  0.302          FFT_Module_Instance/bValFr4
+    ----------------------------------------
+    Total                      4.131ns (1.865ns logic, 2.266ns route)
+                                       (45.1% logic, 54.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_42_o'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              3.216ns (Levels of Logic = 1)
+  Source:            FioSp<9> (PAD)
+  Destination:       FFT_Module_Instance/aVal4_0 (LATCH)
+  Destination Clock: FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_42_o falling
+
+  Data Path: FioSp<9> to FFT_Module_Instance/aVal4_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   1.328   1.586  FioSp_9_IBUF (FioSp_9_IBUF)
+     LDE:GE                    0.302          FFT_Module_Instance/aValFr4
+    ----------------------------------------
+    Total                      3.216ns (1.630ns logic, 1.586ns route)
+                                       (50.7% logic, 49.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_36_o'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              3.216ns (Levels of Logic = 1)
+  Source:            FioSp<9> (PAD)
+  Destination:       FFT_Module_Instance/aVal3_0 (LATCH)
+  Destination Clock: FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_36_o falling
+
+  Data Path: FioSp<9> to FFT_Module_Instance/aVal3_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   1.328   1.586  FioSp_9_IBUF (FioSp_9_IBUF)
+     LDE:GE                    0.302          FFT_Module_Instance/aValFr3
+    ----------------------------------------
+    Total                      3.216ns (1.630ns logic, 1.586ns route)
+                                       (50.7% logic, 49.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_30_o'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              3.216ns (Levels of Logic = 1)
+  Source:            FioSp<9> (PAD)
+  Destination:       FFT_Module_Instance/aVal2_1 (LATCH)
+  Destination Clock: FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_30_o falling
+
+  Data Path: FioSp<9> to FFT_Module_Instance/aVal2_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   1.328   1.586  FioSp_9_IBUF (FioSp_9_IBUF)
+     LDE:GE                    0.302          FFT_Module_Instance/aValFr2
+    ----------------------------------------
+    Total                      3.216ns (1.630ns logic, 1.586ns route)
+                                       (50.7% logic, 49.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_24_o'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              3.216ns (Levels of Logic = 1)
+  Source:            FioSp<9> (PAD)
+  Destination:       FFT_Module_Instance/aVal1_0 (LATCH)
+  Destination Clock: FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_24_o falling
+
+  Data Path: FioSp<9> to FFT_Module_Instance/aVal1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   1.328   1.586  FioSp_9_IBUF (FioSp_9_IBUF)
+     LDE:GE                    0.302          FFT_Module_Instance/aValFr1
+    ----------------------------------------
+    Total                      3.216ns (1.630ns logic, 1.586ns route)
+                                       (50.7% logic, 49.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 24 / 15
+-------------------------------------------------------------------------
+Offset:              7.769ns (Levels of Logic = 3)
+  Source:            DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_7 (FF)
+  Destination:       DACWE (PAD)
+  Source Clock:      clk rising
+
+  Data Path: DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_7 to DACWE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q            517   0.525   2.461  DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_7 (DM_TLV5619_DAC_Interface_Module_Instance/DACDelayCount_7)
+     LUT5:I4->O            1   0.254   0.682  DM_TLV5619_DAC_Interface_Module_Instance/DACWE_SW0 (N01)
+     LUT6:I5->O            1   0.254   0.681  DM_TLV5619_DAC_Interface_Module_Instance/DACWE (DACWE_OBUF)
+     OBUF:I->O                 2.912          DACWE_OBUF (DACWE)
+    ----------------------------------------
+    Total                      7.769ns (3.945ns logic, 3.824ns route)
+                                       (50.8% logic, 49.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+------------------------------------------------+---------+---------+---------+---------+
+                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------------+---------+---------+---------+---------+
+FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_24_o|         |   13.588|         |         |
+FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_30_o|         |   13.692|         |         |
+FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_36_o|         |   13.797|         |         |
+FFT_Module_Instance/FioSp[12]_FioSp[10]_AND_42_o|         |   13.864|         |         |
+FioSp<9>                                        |   13.942|         |         |         |
+clk                                             |   16.014|         |         |         |
+------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 103.00 secs
+Total CPU time to Xst completion: 102.78 secs
+ 
+--> 
+
+Total memory usage is 275640 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  183 (   0 filtered)
+Number of infos    :   59 (   0 filtered)
+

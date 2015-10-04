@@ -1,0 +1,162 @@
+#made by yours truly
+#swag
+#hashtag_hashtag
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50%;
+
+####
+NET "clk" LOC = N8;// or K12;
+
+NET "user_switch" LOC = L15;
+NET "user_led0" LOC = H15;
+NET "user_led1" LOC = J15;
+####
+
+
+
+
+
+
+ 
+
+#NET "plcc_1"  LOC = "J2"; #IOB0
+#NET "plcc_2"  LOC = "J1"; #IOB1
+#NET "plcc_3"  LOC = "D4"; #IOB2
+#NET "plcc_4"  LOC = "E3"; #IOB3
+#NET "plcc_5"  LOC = "D3"; #IOB4
+#NET "plcc_6"  LOC = "D1"; #IOB5
+#NET "plcc_7"  LOC = "C2"; #IOB6
+#NET "plcc_8"  LOC = "C1"; #IOB7
+#                                  
+#                                   
+#                                  
+#NET "plcc_12"  LOC = "E2"; #IOB8
+#NET "plcc_13"  LOC = "E1"; #IOB9
+#NET "plcc_14"  LOC = "F3"; #IOB10
+#NET "plcc_15"  LOC = "F1"; #IOB11
+#NET "plcc_16"  LOC = "G2"; #IOB12
+#NET "plcc_17"  LOC = "G1"; #IOB13
+#NET "plcc_18"  LOC = "H3"; #IOB14
+#NET "plcc_19"  LOC = "H1"; #IOB15
+#NET "plcc_20"  LOC = "K4"; #IOB16
+#NET "plcc_21"  LOC = "J3"; #IOB17
+#NET "plcc_22"  LOC = "K3"; #IOB18
+#NET "plcc_23"  LOC = "K1"; #IOB19
+#NET "plcc_24"  LOC = "N2"; #IOB20
+#NET "plcc_25"  LOC = "N1"; #IOB21
+#                                  
+#                                  
+#                                  
+#NET "plcc_29"  LOC = "P2"; #IOB22
+#NET "plcc_30"  LOC = "P1"; #IOB23
+#NET "plcc_31"  LOC = "M4"; #IOB24
+#                                  
+#                                  
+#                                  
+#                                  
+#                                  
+#                                
+#NET "plcc_38"  LOC = "C8"; #IOA24
+#NET "plcc_39"  LOC = "A9"; #IOA23
+#NET "plcc_40"  LOC = "B9"; #IOA22
+#NET "plcc_41" LOC = "C11"; #IOA21
+#NET "plcc_42" LOC = "D11"; #IOA20
+#                                   
+#                                     
+#                                     
+#NET "plcc_46" LOC = "A12"; #IOA19
+#NET "plcc_47" LOC = "C12"; #IOA18
+#NET "plcc_48"  LOC = "A7"; #IOA17
+#NET "plcc_49"  LOC = "B7"; #IOA16
+#NET "plcc_50" LOC = "A13"; #IOA15
+#NET "plcc_51" LOC = "B13"; #IOA14
+#NET "plcc_52" LOC = "A11"; #IOA13
+#NET "plcc_53" LOC = "B11"; #IOA12
+#NET "plcc_54"  LOC = "A6"; #IOA11
+#NET "plcc_55"  LOC = "C6"; #IOA10
+#NET "plcc_56" LOC = "A10"; #IOA9
+#NET "plcc_57" LOC = "C10"; #IOA8
+#NET "plcc_58"  LOC = "A5"; #IOA7
+#NET "plcc_59"  LOC = "B5"; #IOA6
+#                                   
+#                                 
+#                                   
+#NET "plcc_63"  LOC = "A4"; #IOA5
+#NET "plcc_64"  LOC = "C4"; #IOA4
+#NET "plcc_65"  LOC = "A3"; #IOA3
+#NET "plcc_66"  LOC = "B3"; #IOA2
+#NET "plcc_67"  LOC = "D8"; #IOA1
+#NET "plcc_68"  LOC = "E7"; #IOA0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NET "DACD<0>" LOC = "A5";
+NET "DACD<1>" LOC = "B5";
+NET "DACD<2>" LOC = "C10";
+NET "DACD<3>" LOC = "A10";
+NET "DACD<4>" LOC = "C6";
+NET "DACD<5>" LOC = "A6";
+NET "DACD<6>" LOC = "B11";
+NET "DACD<7>" LOC = "A11";
+NET "DACD<8>" LOC = "B13";
+NET "DACD<9>" LOC = "A13";
+NET "DACD<10>" LOC = "B7";
+NET "DACD<11>" LOC = "A7";
+
+NET "DACCS"   LOC = "C12";
+NET "DACWE"   LOC = "A12";
+NET "DACLDAC" LOC = "D11";
+NET "DACPD"   LOC = "C11";
+
+
+NET "DMCLK"     LOC = "E7";
+NET "DMDATA1"   LOC = "D8";
+NET "DMDATA2"   LOC = "B3";
+NET "DMDATA3"   LOC = "A3";
+NET "DMDATA4"   LOC = "C4";
+
+
+#
+#
+#
+#
+#
+#
+NET "FioSp<0>"   LOC = "E2"; #FioSp0  - Fio 21
+NET "FioSp<1>"   LOC = "E1"; #FioSp1  - Fio 20
+NET "FioSp<2>"   LOC = "F3"; #FioSp2  - Fio 19
+NET "FioSp<3>"   LOC = "F1"; #FioSp3  - Fio 18
+NET "FioSp<4>"   LOC = "G2"; #FioSp4  - Fio 14
+NET "FioSp<5>"   LOC = "G1"; #FioSp5  - Fio 16
+NET "FioSp<6>"   LOC = "H3"; #FioSp6  - Fio 6
+NET "FioSp<7>"   LOC = "H1"; #FioSp7  - Fio 7
+NET "FioSp<8>"   LOC = "K4"; #FioSp8  - Fio 8
+NET "FioSp<9>"   LOC = "J3"; #FioSp9  - Fio 9
+NET "FioSp<10>"  LOC = "K3"; #FioSp10 - Fio 10
+NET "FioSp<10>" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "FioSp<11>"  LOC = "K1"; #FioSp11 - Fio 11
+NET "FioSp<12>"  LOC = "N2"; #FioSp12 - Fio 17
+NET "FioSp<13>"  LOC = "N1"; #FioSp13 - Fio 15
+
+#NET "FioSp<14>"   LOC = "C1"; #FioSp14 - Fio Tx / 1
+#NET "FioSp<15>"   LOC = "C2"; #FioSp15 - Fio Rx / 0

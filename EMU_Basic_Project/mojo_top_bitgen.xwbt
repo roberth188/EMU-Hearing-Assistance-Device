@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\mojo_top.ncd
+OUTFILE=C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData\mojo_top.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg225
+WORKINGDIR=C:\Users\RobertHenning\EMU_FFT_FourDMs_SendData
+LICENSE=WebPack
+USER_INFO=210881757_0_0_459

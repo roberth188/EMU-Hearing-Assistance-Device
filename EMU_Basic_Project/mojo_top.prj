@@ -1,0 +1,6 @@
+verilog work "ipcore_dir/Translation_Module_DM.v"
+verilog work "ipcore_dir/FFT_IFFT_IP_CORE.v"
+verilog work "FFT_and_IFFT_Module.v"
+verilog work "DM_TLV5619_DAC_Interface_Module.v"
+verilog work "DigiMic_Interface.v"
+verilog work "src/mojo_top.v"
